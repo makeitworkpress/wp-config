@@ -14,11 +14,10 @@ class Config {
 
     /**
      * Contains our modified configurations
-     * This is set to private because modifications should be done through the class methods
      *
      * @access private
      */
-    private $configurations;
+    public $configurations;
 
     /**
      * Initializes and sets our configurations in the form of an array
