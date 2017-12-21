@@ -4,7 +4,7 @@
  * It can load configurations from an array or a file
  * If the configurations are loaded from a file, the file itself should return these configurations
  */
-namespace WP_Config;
+namespace MakeitWorkPress\WP_Config;
 use WP_Error as WP_Error;
 
 defined( 'ABSPATH' ) or die( 'Go eat veggies!' );
