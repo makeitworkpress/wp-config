@@ -30,7 +30,8 @@ class Config {
 
         // If the configuration parameter is a string, we expect that it is a file path
         if( is_string($configuration) ) {
-            $this->configurations = $this->load( $configuration );
+            
+            $this->load( $configuration );
 
             if( is_wp_error($this->configurations) ) {
                 echo $this->configurations->get_error_message();
@@ -56,7 +57,8 @@ class Config {
         // Type should be defined
         if( ! $type ) {
             $error = new WP_Error( 'type_missing', __('Please define a configuration type', 'wp-config') );
-            return $error->get_error_message();
+            echo $error->get_error_message();
+            return;
         }
 
         // If the configuration alreday exists for the array, we merge those arrays
@@ -83,7 +85,7 @@ class Config {
             // Make sure there the configuration file returns an array of data
             $data = require_once(  $configuration  );
 
-            $this->configuration = $data ? (array) $data : [];
+            $this->configurations = $data ? (array) $data : [];
 
         } else {
             return new WP_Error( 'missing', __('Could not load the configuration file for your theme or plugin!', 'wp-config') );
