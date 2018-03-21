@@ -31,9 +31,9 @@ $configurations->add( string $type, array $configurations );
 The parameter $type refers to the first level key of your original configurations array. The array configurations may be the configurations you want to add or alter. Please look to the example of how this works in practice.
 
 ### Example
-
 The following example loads configurations directly from an array.
 
+&nbsp;
 ```php
 $configurations = new MakeitWorkPress/WP_Configurations/Config( [
     'options' => [
@@ -49,11 +49,13 @@ $configurations = new MakeitWorkPress/WP_Configurations/Config( [
 ] );
 ``` 
 
-And this example loads the configurations from a file
+&nbsp;
+And this example loads the configurations from a file.
 ```php
 $configurations = new MakeitWorkPress/WP_Configurations/Config( 'home/app/appname/wp-content/themes/theme/config/settings.php' );
 ``` 
 
+&nbsp;
 The following example adds another field to our options defined within the configuration. Because WP Config parses in a multidimensional way, the earlier defined field and keys are preserved.
 ```php
 $configurations->add( 'options', [
