@@ -72,6 +72,14 @@ class Config {
     }
 
     /**
+     * Deletes a certain set of configurations
+     * @todo To be developed
+     */
+    public function delete( $type, $configurations ) {
+
+    }    
+
+    /**
      * Loads our configuration file
      *
      * @param string $configuration The uri to the configuration file
