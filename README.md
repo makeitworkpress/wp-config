@@ -33,7 +33,6 @@ The parameter $type refers to the first level key of your original configuration
 ### Example
 The following example loads configurations directly from an array.
 
-&nbsp;
 ```php
 $configurations = new MakeitWorkPress/WP_Configurations/Config( [
     'options' => [
